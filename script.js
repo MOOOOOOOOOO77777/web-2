@@ -124,9 +124,3 @@ themeToggle.addEventListener('click', () => {
     body.style.color = 'white';
   }
 });
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  // تغيير شكل الأيقونة
-  themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
-}); 
