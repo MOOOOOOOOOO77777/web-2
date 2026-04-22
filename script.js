@@ -107,3 +107,20 @@ gsap.utils.toArray(".card img").forEach(img => {
     }
   });
 });
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light-theme');
+  
+  // تغيير شكل الأيقونة
+  if (body.classList.contains('light-theme')) {
+    themeToggle.textContent = '☀️';
+    body.style.background = 'radial-gradient(circle at top, #e0e0e0, #ffffff)';
+    body.style.color = '#111';
+  } else {
+    themeToggle.textContent = '🌙';
+    body.style.background = 'radial-gradient(circle at top, #1a1a2e, #0d0d0d)';
+    body.style.color = 'white';
+  }
+});
