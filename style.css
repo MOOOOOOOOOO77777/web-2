@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+body { 
   background: radial-gradient(circle at top, #1a1a2e, #0d0d0d);
   color: white;
   overflow-x: hidden;
