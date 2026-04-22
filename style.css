@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a1a2e, #0d0d0d);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links a {
+  color: #aaa;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffff;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 140px 80px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  width: 170px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #111;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* SKILLS */
+.skill {
+  margin: 20px 0;
+}
+
+.bar {
+  width: 100%;
+  height: 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #00ffff, #00ff99);
+  border-radius: 30px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.contact-item .icon {
+  font-size: 20px;
+  filter: drop-shadow(0 0 5px rgba(0,255,255,0.3));
+}
+
+.contact-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.25);
+  border-color: rgba(0,255,255,0.3);
+}
+@media (max-width: 768px) {
+  /* تقليل المسافات الجانبية في السكاشن */
+  .section {
+    padding: 80px 20px;
+  }
+
+  /* إخفاء القائمة العلوية أو جعلها مرنة */
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+
+  /* ضبط حجم صورة البروفايل والعناوين */
+  .hero img {
+    width: 130px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  /* أهم جزء: جعل شبكة المشاريع عمود واحد بدل اتنين أو تلاتة */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
