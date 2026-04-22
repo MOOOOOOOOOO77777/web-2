@@ -212,3 +212,27 @@ body {
     padding: 8px;
   }
 }
+/* تحسين شكل الـ Contact في اللايت مود */
+.light-mode .contact-item {
+  background: rgba(0, 0, 0, 0.05); /* خلفية رمادي فاتح جداً */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333; /* لون نص غامق عشان يظهر */
+}
+
+.light-mode .contact-item:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #008888;
+}
+
+.light-mode h2, .light-mode h3, .light-mode p {
+  color: #222; /* تأكيد إن كل العناوين والنصوص بقت غامقة */
+}
+
+.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .nav-links a {
+  color: #444;
+}
